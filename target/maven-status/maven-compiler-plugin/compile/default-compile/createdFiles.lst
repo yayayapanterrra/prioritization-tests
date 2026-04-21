@@ -1,0 +1,13 @@
+com\tcp\fitness\GaFitnessFunction.class
+com\tcp\metric\ApfdCostCalculator.class
+com\tcp\algorithm\GeneticPrioritizer.class
+com\tcp\algorithm\AdditionalPrioritizer.class
+com\tcp\algorithm\Prioritizer.class
+com\tcp\algorithm\RandomPrioritizer.class
+com\tcp\Main$ResultRow.class
+com\tcp\model\TestCase.class
+com\tcp\Main$ThrowingSupplier.class
+com\tcp\Main.class
+com\tcp\data\DataLoader$FaultMatrixData.class
+com\tcp\metric\ApfdCalculator.class
+com\tcp\data\DataLoader.class
