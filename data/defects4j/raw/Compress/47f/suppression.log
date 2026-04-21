@@ -1,0 +1,145 @@
+117|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.ArchiveStreamFactory@detect(java.io.InputStream)|497|19702|ANY
+154|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.Lister@main(java.lang.String[])|38|1491|<=(int,int)
+220|SUPPRESSION|EQUALS_COND|Equals ref. equality check condition|org.apache.commons.compress.archivers.ar.ArArchiveEntry@equals(java.lang.Object)|174|5653|FALSE(java.lang.Object,java.lang.Object)
+272|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.ar.ArArchiveInputStream@getNextArEntry()|96|3388|!=(int,int)
+277|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.archivers.ar.ArArchiveInputStream@getNextArEntry()|103|3654|NEG
+313|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.ar.ArArchiveInputStream@getNextArEntry()|127|4545|!=(int,int)
+385|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.ar.ArArchiveInputStream@asInt(byte[],int,boolean)|208|7971|<=(int,int)
+535|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.archivers.ar.ArArchiveOutputStream@closeArchiveEntry()|80|2885|NEG
+812|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.arj.ArjArchiveInputStream@readHeader()|132|5287|ANY
+1284|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.cpio.CpioArchiveEntry@setSize(long)|728|21638|!=(boolean,boolean)
+1317|SUPPRESSION|EQUALS_COND|Equals ref. equality check condition|org.apache.commons.compress.archivers.cpio.CpioArchiveEntry@equals(java.lang.Object)|881|25530|FALSE(java.lang.Object,java.lang.Object)
+1359|SUPPRESSION|BOUNDS_MAX_MIN|Bounds check MAX or MIN value|org.apache.commons.compress.archivers.cpio.CpioArchiveInputStream@closeEntry()|206|6817|>=(long,long)
+1962|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry)|283|9838|NEG
+2433|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.archivers.cpio.CpioUtil@byteArray2long(byte[],boolean)|47|1665|NEG
+2443|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.cpio.CpioUtil@byteArray2long(byte[],boolean)|51|1753|ANY
+2443|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.cpio.CpioUtil@byteArray2long(byte[],boolean)|52|1776|ANY
+2450|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.cpio.CpioUtil@byteArray2long(byte[],boolean)|57|1962|ANY
+2480|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.cpio.CpioUtil@long2byteArray(long,int,boolean)|90|3084|ANY
+2480|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.cpio.CpioUtil@long2byteArray(long,int,boolean)|91|3106|ANY
+2480|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.archivers.cpio.CpioUtil@long2byteArray(long,int,boolean)|93|3151|NEG
+2522|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.cpio.CpioUtil@long2byteArray(long,int,boolean)|104|3464|ANY
+3028|SUPPRESSION|EQUALS_COND|Equals ref. equality check condition|org.apache.commons.compress.archivers.dump.DumpArchiveSummary@equals(java.lang.Object)|311|8765|FALSE(java.lang.Object,java.lang.Object)
+3215|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.dump.DumpArchiveInputStream@readDirectoryEntry(org.apache.commons.compress.archivers.dump.DumpArchiveEntry)|351|11606|ANY
+3264|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.dump.DumpArchiveInputStream@readDirectoryEntry(org.apache.commons.compress.archivers.dump.DumpArchiveEntry)|362|12067|!=(boolean,boolean)
+3451|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.dump.TapeInputStream@read(byte[],int,int)|137|4473|ANY
+3503|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.dump.TapeInputStream@skip(long)|188|6126|ANY
+3636|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.dump.DumpArchiveUtil@calculateChecksum(byte[])|45|1490|!=(int,int)
+3940|SUPPRESSION|EQUALS_COND|Equals ref. equality check condition|org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object)|881|29887|FALSE(java.lang.Object,java.lang.Object)
+4656|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[])|617|24006|!=(int,int)
+5515|SUPPRESSION|CONST_FOLD_EXPR|Const fold expression|org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@rewriteSizesAndCrc(boolean)|689|26912|2 + SHORT
+5528|SUPPRESSION|CONST_FOLD_EXPR|Const fold expression|org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@rewriteSizesAndCrc(boolean)|690|26964|2 + SHORT
+5679|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int)|874|34399|!=(boolean,boolean)
+6131|SUPPRESSION|CONST_FOLD_EXPR|Const fold expression|org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeZip64CentralDirectory()|1412|55904|SHORT * SHORT
+6471|SUPPRESSION|USELESS_ASSIGN|Useless assignment|org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraField@parseFromLocalFileData(byte[],int,int)|178|6718|Deletion
+6568|SUPPRESSION|USELESS_ASSIGN|Useless assignment|org.apache.commons.compress.archivers.zip.Zip64ExtendedInformationExtraField@reparseCentralDirectoryData(boolean,boolean,boolean,boolean)|259|10744|Deletion
+6835|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.AES256SHA256Decoder$1@init()|79|3957|!=(int,int)
+6873|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.Folder@findBindPairForInStream(int)|66|2620|!=(int,int)
+6882|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.Folder@findBindPairForOutStream(int)|75|2859|!=(int,int)
+6917|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.Folder@getUnpackSizeForCoder(org.apache.commons.compress.archivers.sevenz.Coder)|97|3450|!=(int,int)
+7141|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.sevenz.BoundedSeekableByteChannelInputStream@<init>(java.nio.channels.SeekableByteChannel,long)|35|1465|==(boolean,boolean)
+7250|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.sevenz.CLI@main(java.lang.String[])|117|4999|<=(int,int)
+7409|SUPPRESSION|IDENTITY_ELEMENT|Identity element in alg. group|org.apache.commons.compress.archivers.sevenz.SevenZFile@readEncodedHeader(java.nio.ByteBuffer,org.apache.commons.compress.archivers.sevenz.Archive,byte[])|351|13355|-(long,long)
+7647|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readFolder(java.nio.ByteBuffer)|567|21899|!=(int,int)
+7715|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readFolder(java.nio.ByteBuffer)|606|23730|!=(int,int)
+7799|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readFilesInfo(java.nio.ByteBuffer,org.apache.commons.compress.archivers.sevenz.Archive)|671|26115|!=(int,int)
+7899|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readFilesInfo(java.nio.ByteBuffer,org.apache.commons.compress.archivers.sevenz.Archive)|731|28962|!=(int,int)
+7912|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readFilesInfo(java.nio.ByteBuffer,org.apache.commons.compress.archivers.sevenz.Archive)|745|29650|!=(int,int)
+7925|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readFilesInfo(java.nio.ByteBuffer,org.apache.commons.compress.archivers.sevenz.Archive)|759|30332|!=(int,int)
+7938|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readFilesInfo(java.nio.ByteBuffer,org.apache.commons.compress.archivers.sevenz.Archive)|773|31045|!=(int,int)
+7956|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readFilesInfo(java.nio.ByteBuffer,org.apache.commons.compress.archivers.sevenz.Archive)|805|32476|!=(int,int)
+8155|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@readUint64(java.nio.ByteBuffer)|1008|41754|!=(int,int)
+8204|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZFile@matches(byte[],int)|1038|42673|!=(int,int)
+8541|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry()|192|7230|!=(int,int)
+8763|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeSingleCodec(org.apache.commons.compress.archivers.sevenz.SevenZMethodConfiguration,java.io.OutputStream)|453|16546|!=(int,int)
+8772|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeSingleCodec(org.apache.commons.compress.archivers.sevenz.SevenZMethodConfiguration,java.io.OutputStream)|459|16686|!=(int,int)
+8799|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput)|506|18227|!=(int,int)
+8868|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput)|596|21934|!=(int,int)
+8903|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput)|632|23389|!=(int,int)
+8938|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput)|668|24868|!=(int,int)
+8973|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput)|704|26389|!=(int,int)
+9280|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader()|838|25043|!=(boolean,boolean)
+9308|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile()|884|26156|!=(boolean,boolean)
+9365|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries()|1111|32947|!=(int,int)
+9382|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean)|1166|35164|!=(int,int)
+9480|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean)|1274|40016|!=(boolean,boolean)
+9508|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean)|1302|41231|!=(int,int)
+9520|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean)|1317|41819|!=(int,int)
+9544|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean)|1343|42737|==(boolean,boolean)
+9553|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean)|1344|42794|==(boolean,boolean)
+9556|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean)|1344|42737|!=(boolean,boolean)
+9721|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData()|358|12269|ANY
+9865|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int)|596|21281|ANY
+10014|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry)|360|12850|!=(int,int)
+10061|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry)|382|13783|!=(int,int)
+10178|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@shouldBeReplaced(char)|525|19371|!=(boolean,boolean)
+10184|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@shouldBeReplaced(char)|526|19371|!=(boolean,boolean)
+10312|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@transferModTime(org.apache.commons.compress.archivers.tar.TarArchiveEntry,org.apache.commons.compress.archivers.tar.TarArchiveEntry)|692|26607|!=(boolean,boolean)
+10522|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int)|131|4821|!=(boolean,boolean)
+10546|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int)|139|5082|!=(boolean,boolean)
+10999|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[])|602|24225|!=(int,int)
+11225|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.zip.AsiExtraField@isLink()|223|7024|>(int,int)
+11265|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.zip.AsiExtraField@parseFromLocalFileData(byte[],int,int)|289|9101|<=(int,int)
+11434|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.zip.BinaryTree@decode(java.io.InputStream,int)|139|5046|!=(int,int)
+11441|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.zip.BinaryTree@decode(java.io.InputStream,int)|145|5244|!=(int,int)
+11445|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.zip.BinaryTree@decode(java.io.InputStream,int)|147|5351|!=(int,int)
+11493|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.zip.BinaryTree@decode(java.io.InputStream,int)|180|6458|!=(int,int)
+11558|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.utils.BitInputStream@readBits(int)|82|2849|!=(boolean,boolean)
+11591|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.utils.BitInputStream@alignWithByteBoundary()|131|4702|NEG
+11602|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.utils.BitInputStream@processBitsGreater57(int)|139|4898|ANY
+11602|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.utils.BitInputStream@processBitsGreater57(int)|140|4929|ANY
+11755|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.zip.ExplodingInputStream@<init>(int,int,java.io.InputStream)|74|2768|==(boolean,boolean)
+11768|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.zip.ExplodingInputStream@<init>(int,int,java.io.InputStream)|77|2937|==(boolean,boolean)
+11936|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.zip.ExtraFieldUtils@mergeLocalFileDataData(org.apache.commons.compress.archivers.zip.ZipExtraField[])|201|8651|!=(int,int)
+12004|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.zip.ExtraFieldUtils@mergeCentralDirectoryData(org.apache.commons.compress.archivers.zip.ZipExtraField[])|240|10271|!=(int,int)
+12317|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.zip.ResourceAlignmentExtraField@<init>(int,boolean,int)|67|2283|!=(boolean,boolean)
+12404|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.zip.UnshrinkingInputStream@<init>(java.io.InputStream)|48|1852|!=(int,int)
+12433|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.archivers.zip.UnshrinkingInputStream@partialClear()|70|2558|!=(int,int)
+12589|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.lzw.LZWInputStream@initializeTables(int)|150|5360|!=(int,int)
+13705|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestamp@unixTimeToZipLong(long)|593|21975|!=(boolean,boolean)
+13836|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.zip.ZipUtil@longToBig(long)|155|5699|==(boolean,boolean)
+13861|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.archivers.zip.ZipUtil@unsignedIntToSignedByte(int)|187|6776|!=(boolean,boolean)
+13950|SUPPRESSION|SIZE_LENGTH|Size/length check|org.apache.commons.compress.archivers.zip.ZipUtil@setNameAndCommentFromExtraFields(org.apache.commons.compress.archivers.zip.ZipArchiveEntry,byte[],byte[])|244|9221|!=(int,int)
+14598|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.archivers.zip.ZipFile$Entry@hashCode()|1252|47833|NEG
+14816|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.compressors.CompressorStreamFactory@detect(java.io.InputStream)|477|17752|ANY
+15103|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream@makeMaps()|191|6475|!=(int,int)
+15150|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream@init(boolean)|259|8361|!=(boolean,boolean)
+15456|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream@recvDecodingTables()|467|15137|!=(int,int)
+15471|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream@recvDecodingTables()|474|15311|!=(int,int)
+15492|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream@recvDecodingTables()|477|15446|!=(int,int)
+15672|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream@getAndMoveToFrontDecode()|609|20075|!=(boolean,boolean)
+16831|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream@hbMakeCodeLengths(byte[],int[],org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream.Data,int,int)|184|5578|ANY
+17469|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream@bsPutInt(int)|711|22133|NEG
+17669|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream@sendMTFValues1(int,int)|812|25489|!=(int,int)
+17918|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream@sendMTFValues4()|978|30869|!=(int,int)
+17931|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream@sendMTFValues4()|986|31097|!=(int,int)
+17943|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream@sendMTFValues4()|989|31217|!=(int,int)
+18298|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream@generateMTFValues()|1186|38104|!=(int,int)
+18502|SUPPRESSION|DEADCODE_IF_TRUE_FALSE|Dead code: if true/false|org.apache.commons.compress.compressors.bzip2.BlockSort|122|4594|ANY
+18742|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.compressors.bzip2.BlockSort@fallbackQSort3(int[],int[],int,int)|368|13713|NEG
+18748|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.compressors.bzip2.BlockSort@fallbackQSort3(int[],int[],int,int)|369|13753|NEG
+20013|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.bzip2.BlockSort@mainSort(org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream.Data,int)|937|37215|!=(int,int)
+21556|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.compressors.deflate.DeflateParameters@setCompressionLevel(int)|73|2357|!=(boolean,boolean)
+21566|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int)|78|2797|ANY
+21634|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int)|161|5849|ANY
+22270|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.deflate64.HuffmanDecoder@buildTree(int[])|426|15687|!=(int,int)
+22524|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream@readToNull(java.io.DataInput)|240|9188|ANY
+22658|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.compressors.gzip.GzipParameters@setCompressionLevel(int)|51|1694|!=(boolean,boolean)
+22835|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.compressors.lz4.BlockLZ4CompressorInputStream@initializeBackReference()|125|4516|ANY
+23716|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.lz77support.LZ77Compressor@slide()|394|14742|!=(int,int)
+23747|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.lz77support.LZ77Compressor@initialize()|405|15072|!=(int,int)
+25052|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.lzma.LZMAUtils@matches(byte[],int)|76|2574|!=(int,int)
+25262|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.compressors.snappy.FramedSnappyCompressorInputStream@readNextBlock()|220|8082|==(boolean,boolean)
+25265|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.compressors.snappy.FramedSnappyCompressorInputStream@readNextBlock()|220|8031|!=(boolean,boolean)
+25276|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.compressors.snappy.FramedSnappyCompressorInputStream@readNextBlock()|223|8220|==(boolean,boolean)
+25440|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.compressors.snappy.SnappyCompressorInputStream@fill()|130|4559|ANY
+25440|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.compressors.snappy.SnappyCompressorInputStream@fill()|131|4584|ANY
+25547|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.compressors.snappy.SnappyCompressorInputStream@readSize()|261|9215|ANY
+25594|SUPPRESSION|IDENTITY_ELEMENT|Identity element in alg. group|org.apache.commons.compress.compressors.snappy.PureJavaCrc32C@update(byte[],int,int)|62|2145|-(int,int)
+30072|SUPPRESSION|DUMMY_INIT|Dummy init|org.apache.commons.compress.compressors.snappy.SnappyCompressorOutputStream@writeUncompressedSize(long)|150|6056|ANY
+30147|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.compressors.snappy.SnappyCompressorOutputStream@writeBackReference(org.apache.commons.compress.compressors.lz77support.LZ77Compressor.BackReference)|234|9989|==(boolean,boolean)
+30262|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.xz.XZUtils@matches(byte[],int)|85|2921|!=(int,int)
+30351|SUPPRESSION|SPECIAL_VALUE_MOD_SHIFT|Special value (mod/shift)|org.apache.commons.compress.compressors.z.ZCompressorInputStream@reAlignReading()|87|3380|NEG
+30499|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.zstandard.ZstdUtils@matches(byte[],int)|112|4053|!=(int,int)
+30522|SUPPRESSION|LOOP_BOUNDS|Loop bounds check|org.apache.commons.compress.compressors.zstandard.ZstdUtils@matches(byte[],int)|124|4417|!=(int,int)
+30822|SUPPRESSION|MUTUALLY_EXCLUSIVE|Mutually exclusive|org.apache.commons.compress.utils.SeekableInMemoryByteChannel@position(long)|85|2858|!=(boolean,boolean)

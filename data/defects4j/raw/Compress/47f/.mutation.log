@@ -1,0 +1,28 @@
+
+test-offline:
+
+get-deps:
+
+commons-compress-from-maven.compile:
+    [javac] /opt/project/data/raw/Compress/47f/maven-build.xml:95: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-compress-from-maven.compile-tests:
+    [javac] /opt/project/data/raw/Compress/47f/maven-build.xml:128: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+
+update.all.tests:
+
+mutation.test:
+     [echo] Running mutation analysis ...
+    [junit] MAJOR: Mutation analysis enabled
+    [junit] MAJOR: [1;31morg.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest[testUnshrinkEntry] failed![0m
+    [junit] MAJOR: [1;31m -> AssertionFailedError[0m
+    [junit] MAJOR: [1;31m -> "array lengths differed, expected.length=80 actual.length=76"[0m
+
+BUILD FAILED
+/opt/project/defects4j/framework/projects/defects4j.build.xml:228: Test org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest failed
+
+Total time: 36 seconds
