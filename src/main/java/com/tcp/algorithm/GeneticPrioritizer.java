@@ -25,7 +25,7 @@ import java.util.List;
  *   - Элитизм:   встроенный механизм Jenetics (eliteCount через селектор)
  *
  * Фитнесс-функция: GaFitnessFunction с тремя нормализованными компонентами:
- *   coverage (0.4) + fault-proneness (0.4) + Jaccard diversity (0.2)
+ *   coverage (0.0) + fault-proneness (0.8) + Jaccard diversity (0.2)
  *
  * Режим остановки: фиксированное число поколений (Limits.byFixedGeneration).
  */
@@ -66,7 +66,7 @@ public class GeneticPrioritizer implements Prioritizer {
                 // Селекция родителей: турнир размером 3
                 .offspringSelector(new TournamentSelector<>(3))
                 .alterers(
-                        // PMX — аналог OX, гарантирует валидную перестановку
+                        // PMX - гарантирует валидную перестановку
                         new PartiallyMatchedCrossover<>(crossoverRate),
                         // Swap-мутация двух случайных позиций
                         new SwapMutator<>(mutationRate)
