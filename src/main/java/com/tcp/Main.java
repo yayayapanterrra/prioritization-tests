@@ -50,7 +50,7 @@ public class Main {
         System.out.println("=== TCP Benchmark ===");
 
         while (true) {
-            System.out.println("\n1. BigFaultMatrix (4 вариации как в статье)");
+            System.out.println("\n1. BigFaultMatrix");
             System.out.println("2. Defects4J (tcp-methods)");
             System.out.println("3. Синтетические данные");
             System.out.println("4. Все Defects4J проекты");
@@ -87,7 +87,7 @@ public class Main {
         FaultMatrixData original = loadOrNull(() -> DataLoader.loadFaultMatrix(BFM_PATH));
         if (original == null) return;
 
-        System.out.println("\n=== BigFaultMatrix: 4 вариации (Paygude et al., 2020) ===");
+        System.out.println("\n=== BigFaultMatrix: 4 вариации ===");
 
         String[] labels = { "BFM-original", "BFM-flip10", "BFM-flip20", "BFM-flip30" };
         double[] flips  = { 0.0, 0.1, 0.2, 0.3 };
@@ -207,7 +207,7 @@ public class Main {
         List<Prioritizer> algorithms = new ArrayList<>();
         algorithms.add(new AdditionalPrioritizer());
         algorithms.add(new GeneticPrioritizer(100, gens, 0.8, 0.2, new GaFitnessFunction(1.0, 0.0, 0.0)));
-        algorithms.add(new GeneticPrioritizer(100, gens, 0.8, 0.2, new GaFitnessFunction(0.2, 0.6, 0.2)));
+        algorithms.add(new GeneticPrioritizer(100, gens, 0.8, 0.2, new GaFitnessFunction(0.0, 0.8, 0.2)));
 
         for (int i = 0; i < algorithms.size(); i++) {
             List<TestCase> ordered = algorithms.get(i).prioritize(new ArrayList<>(data.tests));
