@@ -189,7 +189,6 @@ public class Main {
 
     // --- Сбор метрик ---
 
-    // Запускает все алгоритмы и возвращает Map: algorithmName -> [apfd, apfdc]
     private static Map<String, double[]> collectMetrics(FaultMatrixData data, int gens) {
         Map<String, double[]> result = new LinkedHashMap<>();
 
@@ -201,25 +200,41 @@ public class Main {
             sumApfdc += ApfdCostCalculator.calculateWithCost(ordered, data.testToFaults, data.totalFaults);
         }
         result.put("Random", new double[]{ sumApfd / RANDOM_RUNS, sumApfdc / RANDOM_RUNS });
+        orderedResults.put("Random", new RandomPrioritizer(0).prioritize(new ArrayList<>(data.tests)));
 
-        // Additional, GA-Base, GA-FP+Div
-        List<String> names = List.of("Additional", "GA-Base", "GA-FP+Div");
-        List<Prioritizer> algorithms = new ArrayList<>();
-        algorithms.add(new AdditionalPrioritizer());
-        algorithms.add(new GeneticPrioritizer(100, gens, 0.8, 0.2, new GaFitnessFunction(1.0, 0.0, 0.0)));
-        algorithms.add(new GeneticPrioritizer(100, gens, 0.8, 0.2, new GaFitnessFunction(0.0, 0.8, 0.2)));
+        // Additional
+        List<TestCase> addOrdered = new AdditionalPrioritizer().prioritize(new ArrayList<>(data.tests));
+        result.put("Additional", new double[]{
+                ApfdCalculator.calculate(addOrdered, data.testToFaults, data.totalFaults),
+                ApfdCostCalculator.calculateWithCost(addOrdered, data.testToFaults, data.totalFaults)
+        });
+        orderedResults.put("Additional", addOrdered);
 
-        for (int i = 0; i < algorithms.size(); i++) {
-            List<TestCase> ordered = algorithms.get(i).prioritize(new ArrayList<>(data.tests));
-            double apfd  = ApfdCalculator.calculate(ordered, data.testToFaults, data.totalFaults);
-            double apfdc = ApfdCostCalculator.calculateWithCost(ordered, data.testToFaults, data.totalFaults);
-            result.put(names.get(i), new double[]{ apfd, apfdc });
-            // сохраняем упорядоченный список для вывода топ-3
-            orderedResults.put(names.get(i), ordered);
+        // GA-Base: среднее по 5 прогонам
+        double sumApfdGaB = 0, sumApfdcGaB = 0;
+        List<TestCase> gaBaseOrdered = null;
+        for (int r = 0; r < 5; r++) {
+            gaBaseOrdered = new GeneticPrioritizer(100, gens, 0.8, 0.2,
+                    new GaFitnessFunction(1.0, 0.0, 0.0))
+                    .prioritize(new ArrayList<>(data.tests));
+            sumApfdGaB  += ApfdCalculator.calculate(gaBaseOrdered, data.testToFaults, data.totalFaults);
+            sumApfdcGaB += ApfdCostCalculator.calculateWithCost(gaBaseOrdered, data.testToFaults, data.totalFaults);
         }
-        // Random топ-3: берём первый прогон
-        orderedResults.put("Random",
-                new RandomPrioritizer(0).prioritize(new ArrayList<>(data.tests)));
+        result.put("GA-Base", new double[]{ sumApfdGaB / 5, sumApfdcGaB / 5 });
+        orderedResults.put("GA-Base", gaBaseOrdered);
+
+        // GA-FP+Div: среднее по 5 прогонам
+        double sumApfdGaFp = 0, sumApfdcGaFp = 0;
+        List<TestCase> gaFpOrdered = null;
+        for (int r = 0; r < 5; r++) {
+            gaFpOrdered = new GeneticPrioritizer(100, gens, 0.8, 0.2,
+                    new GaFitnessFunction(0.0, 0.8, 0.2))
+                    .prioritize(new ArrayList<>(data.tests));
+            sumApfdGaFp  += ApfdCalculator.calculate(gaFpOrdered, data.testToFaults, data.totalFaults);
+            sumApfdcGaFp += ApfdCostCalculator.calculateWithCost(gaFpOrdered, data.testToFaults, data.totalFaults);
+        }
+        result.put("GA-FP+Div", new double[]{ sumApfdGaFp / 5, sumApfdcGaFp / 5 });
+        orderedResults.put("GA-FP+Div", gaFpOrdered);
 
         return result;
     }

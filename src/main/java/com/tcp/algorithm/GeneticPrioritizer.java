@@ -8,8 +8,11 @@ import io.jenetics.engine.EvolutionResult;
 import io.jenetics.engine.Limits;
 import io.jenetics.util.ISeq;
 
+import io.jenetics.util.RandomRegistry;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Генетический алгоритм для приоритизации тестов на базе библиотеки Jenetics.
@@ -26,8 +29,6 @@ import java.util.List;
  *
  * Фитнесс-функция: GaFitnessFunction с тремя нормализованными компонентами:
  *   coverage (0.0) + fault-proneness (0.8) + Jaccard diversity (0.2)
- *
- * Режим остановки: фиксированное число поколений (Limits.byFixedGeneration).
  */
 public class GeneticPrioritizer implements Prioritizer {
 
@@ -51,41 +52,38 @@ public class GeneticPrioritizer implements Prioritizer {
     public List<TestCase> prioritize(List<TestCase> testPool) {
         if (testPool.isEmpty()) return new ArrayList<>();
 
-        // ISeq — неизменяемая последовательность Jenetics, основа PermutationChromosome
         ISeq<TestCase> alleles = ISeq.of(testPool);
 
-        // Фабрика генотипов: одна хромосома = перестановка всех тестов
         Engine<EnumGene<TestCase>, Double> engine = Engine
                 .builder(
                         gt -> fitnessFunction.calculateFitness(toList(gt)),
                         PermutationChromosome.of(alleles)
                 )
                 .populationSize(populationSize)
-                // Селекция выживших: турнир размером 3
                 .survivorsSelector(new TournamentSelector<>(3))
-                // Селекция родителей: турнир размером 3
                 .offspringSelector(new TournamentSelector<>(3))
                 .alterers(
-                        // PMX - гарантирует валидную перестановку
                         new PartiallyMatchedCrossover<>(crossoverRate),
-                        // Swap-мутация двух случайных позиций
                         new SwapMutator<>(mutationRate)
                 )
-                // Элитизм: 1 лучший индивид переходит без изменений
                 .offspringFraction(1.0 - 1.0 / populationSize)
+                .executor(Runnable::run)
                 .build();
 
-        // Запуск эволюции на фиксированное число поколений
-        Genotype<EnumGene<TestCase>> best = engine.stream()
+        Genotype<EnumGene<TestCase>> best = engine
+                .stream(ISeq.of(engine.genotypeFactory().instances()
+                        .limit(populationSize)
+                        .collect(ISeq.toISeq())))
                 .limit(Limits.byFixedGeneration(generations))
                 .collect(EvolutionResult.toBestGenotype());
 
         return toList(best);
+
     }
 
     /**
      * Конвертирует генотип Jenetics в упорядоченный список TestCase.
-     * PermutationChromosome хранит аллели как EnumGene<TestCase>.
+     * PermutationChromosome хранит возможные значения генов как EnumGene<TestCase>.
      */
     private List<TestCase> toList(Genotype<EnumGene<TestCase>> gt) {
         List<TestCase> result = new ArrayList<>();

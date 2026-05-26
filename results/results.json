@@ -1,122 +1,52 @@
 [
   {
-    "timestamp": "2026-05-23 02:54:30",
+    "timestamp": "2026-05-24 02:35:08",
     "dataset": "BFM-original",
     "tests": 999,
     "faults": 38,
     "Random":     {"apfd": 0,9230, "apfdc": 0,6861},
     "Additional": {"apfd": 0,9987, "apfdc": 0,7617},
-    "GA-Base":    {"apfd": 0,9624, "apfdc": 0,7255},
-    "GA-FP+Div": {"apfd": 0,9892, "apfdc": 0,7522}
+    "GA-Base":    {"apfd": 0,9213, "apfdc": 0,6843},
+    "GA-FP+Div": {"apfd": 0,9439, "apfdc": 0,7070}
   },
   {
-    "timestamp": "2026-05-23 02:54:30",
+    "timestamp": "2026-05-24 02:35:08",
     "dataset": "BFM-flip10",
     "tests": 999,
     "faults": 38,
     "Random":     {"apfd": 0,9925, "apfdc": 0,9925},
     "Additional": {"apfd": 0,9983, "apfdc": 0,9983},
-    "GA-Base":    {"apfd": 0,9958, "apfdc": 0,9958},
-    "GA-FP+Div": {"apfd": 0,9965, "apfdc": 0,9965}
+    "GA-Base":    {"apfd": 0,9935, "apfdc": 0,9935},
+    "GA-FP+Div": {"apfd": 0,9963, "apfdc": 0,9963}
   },
   {
-    "timestamp": "2026-05-23 02:54:30",
+    "timestamp": "2026-05-24 02:35:08",
     "dataset": "BFM-flip20",
     "tests": 999,
     "faults": 38,
     "Random":     {"apfd": 0,9962, "apfdc": 0,9962},
     "Additional": {"apfd": 0,9988, "apfdc": 0,9988},
-    "GA-Base":    {"apfd": 0,9964, "apfdc": 0,9964},
-    "GA-FP+Div": {"apfd": 0,9977, "apfdc": 0,9977}
+    "GA-Base":    {"apfd": 0,9972, "apfdc": 0,9972},
+    "GA-FP+Div": {"apfd": 0,9976, "apfdc": 0,9976}
   },
   {
-    "timestamp": "2026-05-23 02:54:30",
+    "timestamp": "2026-05-24 02:35:08",
     "dataset": "BFM-flip30",
     "tests": 999,
     "faults": 38,
     "Random":     {"apfd": 0,9977, "apfdc": 0,9977},
     "Additional": {"apfd": 0,9989, "apfdc": 0,9989},
-    "GA-Base":    {"apfd": 0,9974, "apfdc": 0,9974},
+    "GA-Base":    {"apfd": 0,9969, "apfdc": 0,9969},
     "GA-FP+Div": {"apfd": 0,9981, "apfdc": 0,9981}
   },
   {
-    "timestamp": "2026-05-23 02:54:30",
-    "dataset": "Jsoup/93",
+    "timestamp": "2026-05-24 02:35:08",
+    "dataset": "D:\POLYTECH\mt\tcp-vid\prioritization-tests\data\defects4j\raw\Jsoup\93",
     "tests": 690,
     "faults": 30,
     "Random":     {"apfd": 0,9115, "apfdc": 0,9115},
     "Additional": {"apfd": 0,9811, "apfdc": 0,9811},
-    "GA-Base":    {"apfd": 0,9866, "apfdc": 0,9866},
-    "GA-FP+Div": {"apfd": 0,9935, "apfdc": 0,9935}
-  },
-  {
-    "timestamp": "2026-05-23 02:54:30",
-    "dataset": "Csv/16",
-    "tests": 284,
-    "faults": 99,
-    "Random":     {"apfd": 0,9915, "apfdc": 0,9915},
-    "Additional": {"apfd": 0,9958, "apfdc": 0,9958},
-    "GA-Base":    {"apfd": 0,9951, "apfdc": 0,9951},
-    "GA-FP+Div": {"apfd": 0,9982, "apfdc": 0,9982}
-  },
-  {
-    "timestamp": "2026-05-23 02:54:30",
-    "dataset": "JacksonDatabind/112",
-    "tests": 36,
-    "faults": 37,
-    "Random":     {"apfd": 0,8945, "apfdc": 0,8945},
-    "Additional": {"apfd": 0,8803, "apfdc": 0,8803},
-    "GA-Base":    {"apfd": 0,7736, "apfdc": 0,7736},
-    "GA-FP+Div": {"apfd": 0,8990, "apfdc": 0,8990}
-  },
-  {
-    "timestamp": "2026-05-23 02:54:30",
-    "dataset": "Time/27",
-    "tests": 3768,
-    "faults": 828,
-    "Random":     {"apfd": 0,9876, "apfdc": 0,9876},
-    "Additional": {"apfd": 0,9965, "apfdc": 0,9965},
-    "GA-Base":    {"apfd": 0,9865, "apfdc": 0,9865},
-    "GA-FP+Div": {"apfd": 0,9929, "apfdc": 0,9929}
-  },
-  {
-    "timestamp": "2026-05-23 02:54:30",
-    "dataset": "Codec/18",
-    "tests": 834,
-    "faults": 26,
-    "Random":     {"apfd": 0,9373, "apfdc": 0,9373},
-    "Additional": {"apfd": 0,9749, "apfdc": 0,9749},
-    "GA-Base":    {"apfd": 0,9930, "apfdc": 0,9930},
-    "GA-FP+Div": {"apfd": 0,9917, "apfdc": 0,9917}
-  },
-  {
-    "timestamp": "2026-05-23 02:54:30",
-    "dataset": "JacksonCore/26",
-    "tests": 108,
-    "faults": 2002,
-    "Random":     {"apfd": 0,8643, "apfdc": 0,8643},
-    "Additional": {"apfd": 0,9623, "apfdc": 0,9623},
-    "GA-Base":    {"apfd": 0,9003, "apfdc": 0,9003},
-    "GA-FP+Div": {"apfd": 0,9094, "apfdc": 0,9094}
-  },
-  {
-    "timestamp": "2026-05-23 02:54:30",
-    "dataset": "Lang/65",
-    "tests": 1609,
-    "faults": 351,
-    "Random":     {"apfd": 0,9342, "apfdc": 0,9342},
-    "Additional": {"apfd": 0,9842, "apfdc": 0,9842},
-    "GA-Base":    {"apfd": 0,9829, "apfdc": 0,9829},
-    "GA-FP+Div": {"apfd": 0,9997, "apfdc": 0,9997}
-  },
-  {
-    "timestamp": "2026-05-23 02:54:30",
-    "dataset": "synthetic",
-    "tests": 200,
-    "faults": 20,
-    "Random":     {"apfd": 0,9862, "apfdc": 0,9846},
-    "Additional": {"apfd": 0,9947, "apfdc": 0,9960},
-    "GA-Base":    {"apfd": 0,9867, "apfdc": 0,9858},
-    "GA-FP+Div": {"apfd": 0,9695, "apfdc": 0,9691}
+    "GA-Base":    {"apfd": 0,8928, "apfdc": 0,8928},
+    "GA-FP+Div": {"apfd": 0,9920, "apfdc": 0,9920}
   }
 ]
