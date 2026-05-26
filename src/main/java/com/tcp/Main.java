@@ -210,30 +210,24 @@ public class Main {
         });
         orderedResults.put("Additional", addOrdered);
 
-        // GA-Base: среднее по 5 прогонам
-        double sumApfdGaB = 0, sumApfdcGaB = 0;
-        List<TestCase> gaBaseOrdered = null;
-        for (int r = 0; r < 5; r++) {
-            gaBaseOrdered = new GeneticPrioritizer(100, gens, 0.8, 0.2,
-                    new GaFitnessFunction(1.0, 0.0, 0.0))
-                    .prioritize(new ArrayList<>(data.tests));
-            sumApfdGaB  += ApfdCalculator.calculate(gaBaseOrdered, data.testToFaults, data.totalFaults);
-            sumApfdcGaB += ApfdCostCalculator.calculateWithCost(gaBaseOrdered, data.testToFaults, data.totalFaults);
-        }
-        result.put("GA-Base", new double[]{ sumApfdGaB / 5, sumApfdcGaB / 5 });
+        // GA-Base
+        List<TestCase> gaBaseOrdered = new GeneticPrioritizer(100, gens, 0.8, 0.2,
+                new GaFitnessFunction(1.0, 0.0, 0.0))
+                .prioritize(new ArrayList<>(data.tests));
+        result.put("GA-Base", new double[]{
+                ApfdCalculator.calculate(gaBaseOrdered, data.testToFaults, data.totalFaults),
+                ApfdCostCalculator.calculateWithCost(gaBaseOrdered, data.testToFaults, data.totalFaults)
+        });
         orderedResults.put("GA-Base", gaBaseOrdered);
 
-        // GA-FP+Div: среднее по 5 прогонам
-        double sumApfdGaFp = 0, sumApfdcGaFp = 0;
-        List<TestCase> gaFpOrdered = null;
-        for (int r = 0; r < 5; r++) {
-            gaFpOrdered = new GeneticPrioritizer(100, gens, 0.8, 0.2,
-                    new GaFitnessFunction(0.0, 0.8, 0.2))
-                    .prioritize(new ArrayList<>(data.tests));
-            sumApfdGaFp  += ApfdCalculator.calculate(gaFpOrdered, data.testToFaults, data.totalFaults);
-            sumApfdcGaFp += ApfdCostCalculator.calculateWithCost(gaFpOrdered, data.testToFaults, data.totalFaults);
-        }
-        result.put("GA-FP+Div", new double[]{ sumApfdGaFp / 5, sumApfdcGaFp / 5 });
+        // GA-FP+Div
+        List<TestCase> gaFpOrdered = new GeneticPrioritizer(100, gens, 0.8, 0.2,
+                new GaFitnessFunction(0.6, 0.4, 0.0))
+                .prioritize(new ArrayList<>(data.tests));
+        result.put("GA-FP+Div", new double[]{
+                ApfdCalculator.calculate(gaFpOrdered, data.testToFaults, data.totalFaults),
+                ApfdCostCalculator.calculateWithCost(gaFpOrdered, data.testToFaults, data.totalFaults)
+        });
         orderedResults.put("GA-FP+Div", gaFpOrdered);
 
         return result;

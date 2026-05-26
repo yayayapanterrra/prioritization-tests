@@ -21,11 +21,10 @@ import java.util.Random;
  * собой валидную перестановку тестов без дубликатов.
  *
  * Операторы (из Jenetics):
- *   - Селекция:  TournamentSelector (размер турнира задаётся параметром)
- *   - Кроссовер: PartiallyMatchedCrossover — аналог OX, сохраняет
- *                валидную перестановку
- *   - Мутация:   SwapMutator — swap двух случайных позиций
- *   - Элитизм:   встроенный механизм Jenetics (eliteCount через селектор)
+ *   - Селекция: TournamentSelector (размер турнира задаётся параметром)
+ *   - Кроссовер: PartiallyMatchedCrossover — аналог OX, сохраняет валидную перестановку
+ *   - Мутация: SwapMutator — swap двух случайных позиций
+ *   - Элитизм: встроенный механизм Jenetics (eliteCount через селектор)
  *
  * Фитнесс-функция: GaFitnessFunction с тремя нормализованными компонентами:
  *   coverage (0.0) + fault-proneness (0.8) + Jaccard diversity (0.2)
@@ -60,20 +59,16 @@ public class GeneticPrioritizer implements Prioritizer {
                         PermutationChromosome.of(alleles)
                 )
                 .populationSize(populationSize)
-                .survivorsSelector(new TournamentSelector<>(3))
+                .survivorsSelector(new EliteSelector<EnumGene<TestCase>, Double>(1, new TournamentSelector<>(3)))
                 .offspringSelector(new TournamentSelector<>(3))
+                .offspringFraction(1.0 - 1.0 / populationSize)
                 .alterers(
                         new PartiallyMatchedCrossover<>(crossoverRate),
                         new SwapMutator<>(mutationRate)
                 )
-                .offspringFraction(1.0 - 1.0 / populationSize)
-                .executor(Runnable::run)
                 .build();
 
-        Genotype<EnumGene<TestCase>> best = engine
-                .stream(ISeq.of(engine.genotypeFactory().instances()
-                        .limit(populationSize)
-                        .collect(ISeq.toISeq())))
+        Genotype<EnumGene<TestCase>> best = engine.stream()
                 .limit(Limits.byFixedGeneration(generations))
                 .collect(EvolutionResult.toBestGenotype());
 
