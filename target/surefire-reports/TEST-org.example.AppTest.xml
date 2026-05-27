@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="org.example.AppTest" time="0.036" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="D:\POLYTECH\mt\tcp-vid\prioritization-tests\target\test-classes;D:\POLYTECH\mt\tcp-vid\prioritization-tests\target\classes;C:\Users\выфВЫФ\.m2\repository\com\opencsv\opencsv\5.7.1\opencsv-5.7.1.jar;C:\Users\выфВЫФ\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\выфВЫФ\.m2\repository\org\apache\commons\commons-text\1.10.0\commons-text-1.10.0.jar;C:\Users\выфВЫФ\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\выфВЫФ\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\выфВЫФ\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\выфВЫФ\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\выфВЫФ\.m2\repository\io\jenetics\jenetics\7.2.0\jenetics-7.2.0.jar;C:\Users\выфВЫФ\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\выфВЫФ\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\выфВЫФ\AppData\Local\Temp\surefire10080524985189071354\surefirebooter-20260527144057102_3.jar C:\Users\выфВЫФ\AppData\Local\Temp\surefire10080524985189071354 2026-05-27T14-40-56_989-jvmRun1 surefire-20260527144057102_1tmp surefire_0-20260527144057102_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\POLYTECH\mt\tcp-vid\prioritization-tests\target\test-classes;D:\POLYTECH\mt\tcp-vid\prioritization-tests\target\classes;C:\Users\выфВЫФ\.m2\repository\com\opencsv\opencsv\5.7.1\opencsv-5.7.1.jar;C:\Users\выфВЫФ\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\выфВЫФ\.m2\repository\org\apache\commons\commons-text\1.10.0\commons-text-1.10.0.jar;C:\Users\выфВЫФ\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\выфВЫФ\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\выфВЫФ\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\выфВЫФ\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\выфВЫФ\.m2\repository\io\jenetics\jenetics\7.2.0\jenetics-7.2.0.jar;C:\Users\выфВЫФ\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\выфВЫФ\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\выфВЫФ"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\POLYTECH\mt\tcp-vid\prioritization-tests"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\выфВЫФ\AppData\Local\Temp\surefire10080524985189071354\surefirebooter-20260527144057102_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.10+7-LTS"/>
+    <property name="user.name" value="vifVIF"/>
+    <property name="stdout.encoding" value="Cp1251"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.10+7"/>
+    <property name="localRepository" value="C:\Users\выфВЫФ\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\E53C~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.10"/>
+    <property name="user.dir" value="D:\POLYTECH\mt\tcp-vid\prioritization-tests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;D:\vmware\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\WireGuard\;C:\Program Files\Git\cmd;C:\msys64\ucrt64\bin;D:\Strawberry\c\bin;D:\Strawberry\perl\site\bin;D:\Strawberry\perl\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Docker\Docker\resources\bin;D:\maven\apache-maven-3.9.14\bin;C:\Program Files\PostgreSQL\18\bin;D:\postgres\bin;C:\Users\выфВЫФ\AppData\Local\Programs\Python\Python314\Scripts\;C:\Users\выфВЫФ\AppData\Local\Programs\Python\Python314\;C:\Users\выфВЫФ\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\выфВЫФ\AppData\Local\Programs\Python\Python311\;C:\Users\выфВЫФ\.cargo\bin;C:\Users\выфВЫФ\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\выфВЫФ\.dotnet\tools;C:\msys64\ucrt64\bin;D:\miktex\miktex\bin\x64\;D:\php;C:\Users\выфВЫФ\AppData\Roaming\Composer\vendor\bin;C:\Users\выфВЫФ\.lmstudio\bin;C:\Users\выфВЫФ\AppData\Local\Python\bin;C:\Users\выфВЫФ\AppData\Local\GitHubDesktop\bin;C:\Users\выфВЫФ\AppData\Local\Programs\Espanso;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.10+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testApp" classname="org.example.AppTest" time="0.003"/>
+</testsuite>
