@@ -50,8 +50,8 @@ public class Main {
         System.out.println("=== TCP Benchmark ===");
 
         while (true) {
-            System.out.println("\n1. BigFaultMatrix (4 вариации как в статье)");
-            System.out.println("2. Defects4J (tcp-methods)");
+            System.out.println("\n1. BigFaultMatrix");
+            System.out.println("2. Defects4J");
             System.out.println("3. Синтетические данные");
             System.out.println("4. Все Defects4J проекты");
             System.out.println("5. Анализ чувствительности весов");
@@ -87,7 +87,7 @@ public class Main {
         FaultMatrixData original = loadOrNull(() -> DataLoader.loadFaultMatrix(BFM_PATH));
         if (original == null) return;
 
-        System.out.println("\n=== BigFaultMatrix: 4 вариации (Paygude et al., 2020) ===");
+        System.out.println("\n=== BigFaultMatrix: 4 вариации ===");
 
         String[] labels = { "BFM-original", "BFM-flip10", "BFM-flip20", "BFM-flip30" };
         double[] flips  = { 0.0, 0.1, 0.2, 0.3 };
@@ -123,9 +123,9 @@ public class Main {
     }
 
     private static FaultMatrixData runSynthetic(Scanner sc) {
-        int tests   = readInt(sc,    "Тестов (100): ",   100);
-        int faults  = readInt(sc,    "Фолтов (50): ",     50);
-        double dens = readDouble(sc, "Плотность (0.1): ", 0.1);
+        int tests   = readInt(sc,"Тестов (100): ",   100);
+        int faults  = readInt(sc,"Фолтов (50): ",     50);
+        double dens = readDouble(sc,"Плотность (0.1): ", 0.1);
         return DataLoader.generateSynthetic(tests, faults, dens);
     }
 
