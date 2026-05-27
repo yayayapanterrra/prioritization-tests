@@ -51,7 +51,7 @@ public class Main {
 
         while (true) {
             System.out.println("\n1. BigFaultMatrix");
-            System.out.println("2. Defects4J (tcp-methods)");
+            System.out.println("2. Defects4J");
             System.out.println("3. Синтетические данные");
             System.out.println("4. Все Defects4J проекты");
             System.out.println("5. Анализ чувствительности весов");

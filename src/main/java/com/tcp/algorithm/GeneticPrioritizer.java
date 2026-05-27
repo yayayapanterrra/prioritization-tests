@@ -25,7 +25,7 @@ import java.util.List;
  *   - Элитизм:   встроенный механизм Jenetics (eliteCount через селектор)
  *
  * Фитнесс-функция: GaFitnessFunction с тремя нормализованными компонентами:
- *   coverage (0.0) + fault-proneness (0.8) + Jaccard diversity (0.2)
+ *   coverage (0.6) + fault-proneness (0.4) + Jaccard diversity (0.0)
  *
  * Режим остановки: фиксированное число поколений (Limits.byFixedGeneration).
  */
