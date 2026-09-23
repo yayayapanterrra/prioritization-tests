@@ -1,16 +1,16 @@
-###Authors and Contributors
+##Authors and Contributors
 The main contributors Yaroslav Kachanov., student of SPbPU ICSC, and Egor Brizhitskiy, student of MIPT.
 The advisor and contributor Vladimir A. Parkhomenko, Senior Lecturer of SPbPU ICSC.
 ###Introduction
 This is a research project for comparing four Test Case Prioritization (TCP) algorithms — Total Coverage, Additional Coverage, MOTCP (Ranked NSGA-II), and CAP (Cluster-based Adaptive Prioritization) — on real-world defects from the BugsInPy benchmark.
 The project is completed during the preparation of  Yaroslav Kachanov work under Testing of Software at SPbPU Institute of Computer Science and Cybersecurity (SPbPU ICSC).
-###License
+##License
 MIT License
 Input datasets used in this repository remain under the original licenses specified by their respective authors and sources:
 BugsInPy — see its repository for license details.
-###Warranty
+##Warranty
 The developed software is in progress. Authors give no warranty.
-###References
+##References
 1. Paygude P., Joshi S. D., Joshi M. Fault Aware Test Case Prioritization in
 Regression Testing using Genetic Algorithm // International Journal of
 Emerging Trends in Engineering Research. — 2020. — Vol. 8, No. 5. —
