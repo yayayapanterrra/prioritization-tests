@@ -22,20 +22,40 @@ Input datasets used in this repository remain under the original licenses specif
 
 The developed software is in progress. Authors give no warranty.
 
-## References
+## Requirements
 
-Требования: JDK 21 или выше, Apache Maven 3.6 или выше.
-Сборка проекта. В терминале перейти в директорию проекта и выполнить:
+- JDK 21 или выше
+- Apache Maven 3.6 или выше
+
+## Build
+
+В терминале перейти в директорию проекта и выполнить:
+
+```bash
 mvn clean package
-Запуск:
-java - jar target / tcp - prioritization -1.0 - SNAPSHOT . jar
+```
+
+## Run
+
+```bash
+java -jar target/tcp-prioritization-1.0-SNAPSHOT.jar
+```
+
+## Implementations
+
 Проект содержит две реализации генетического алгоритма:
-– Ветка main — реализация с OX-кроссовером (собственная).
-– Ветка feature/jenetics-ga — реализация на базе библиотеки
-Jenetics 7.2.0 [6]с PMX-кроссовером.
+
+- Ветка `main` — собственная реализация с OX-кроссовером.
+- Ветка `feature/jenetics-ga` — реализация на базе библиотеки Jenetics 7.2.0 [6] с PMX-кроссовером.
+
 Для переключения между ветками:
-git checkout main # OX - р е а л из а ц и я
-git checkout feature / jenetics - ga # PMX - р е ал и з а ц и я ( Jenetics )
+
+```bash
+git checkout main                  # OX-реализация
+git checkout feature/jenetics-ga   # PMX-реализация (Jenetics)
+```
+
+## References
 
 1. Paygude P., Joshi S. D., Joshi M. Fault Aware Test Case Prioritization in Regression Testing using Genetic Algorithm // International Journal of Emerging Trends in Engineering Research. — 2020. — Vol. 8, No. 5. — P. 2112–2117. — DOI: 10.30534/ijeter/2020/104852020.
 2. Mahdieh M., Mirian-Hosseinabadi S.-H., Etemadi K., Bohlouli M. Incorporating Fault-Proneness Estimations into Coverage-Based Test Case Prioritization // Information and Software Technology. — 2021. — Vol. 133. — P. 106483. — DOI: 10.1016/j.infsof.2021.106483.
