@@ -64,6 +64,6 @@ git checkout feature/jenetics-ga   # PMX implementation (Jenetics)
 1. Paygude P., Joshi S. D., Joshi M. Fault Aware Test Case Prioritization in Regression Testing using Genetic Algorithm // International Journal of Emerging Trends in Engineering Research. — 2020. — Vol. 8, No. 5. — P. 2112–2117. — DOI: 10.30534/ijeter/2020/104852020.
 2. Mahdieh M., Mirian-Hosseinabadi S.-H., Etemadi K., Bohlouli M. Incorporating Fault-Proneness Estimations into Coverage-Based Test Case Prioritization // Information and Software Technology. — 2021. — Vol. 133. — P. 106483. — DOI: 10.1016/j.infsof.2021.106483.
 3. Elbaum S., Malishevsky A. G., Rothermel G. Test Case Prioritization: A Family of Empirical Studies // IEEE Transactions on Software Engineering. — 2002. — Vol. 28, No. 2. — P. 159–182. — DOI: 10.1109/32.988497.
-4. Руденко М. А., Пархоменко В. А. tcp-methods: репозиторий данных для приоритизации тестовых случаев // GitHub. — URL: https://github.com/oneren38/tcp-methods (дата обращения: 08.04.2026).
-5. dathpo. Test Case Prioritisation — Genetic Algorithm: BigFaultMatrix // GitHub. — URL: https://github.com/dathpo/Test_Case_Prioritisation_-_Genetic_Algorithm (дата обращения: 08.04.2026).
-6. Wilhelmstötter F. Jenetics: Java Genetic Algorithm Library. — Version 7.2.0. — 2023. — URL: https://jenetics.io (дата обращения: 25.05.2026).
+4. Руденко М. А., Пархоменко В. А. tcp-methods: репозиторий данных для приоритизации тестовых случаев // GitHub. — URL: https://github.com/oneren38/tcp-methods.
+5. dathpo. Test Case Prioritisation — Genetic Algorithm: BigFaultMatrix // GitHub. — URL: https://github.com/dathpo/Test_Case_Prioritisation_-_Genetic_Algorithm.
+6. Wilhelmstötter F. Jenetics: Java Genetic Algorithm Library. — Version 7.2.0. — 2023. — URL: https://jenetics.io.
