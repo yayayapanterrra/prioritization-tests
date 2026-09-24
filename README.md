@@ -1,5 +1,5 @@
 
-# GA-FP+Div: Genetic Algorithm with Fault-Proneness Estimations and Diversification for Test Case Prioritization
+# Genetic Algorithm with Fault-Proneness Estimations and Diversification for Test Case Prioritization
 
 
 ## Authors and Contributors
